@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>골든패스 (Golden Pass) — 포트폴리오</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="golden-pass.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Golden<span>Pass</span></div>
+  <ul class="nav-links">
+    <li><a href="#problem">문제 정의</a></li>
+    <li><a href="#mechanism">작동 원리</a></li>
+    <li><a href="#uidemo">UI 데모</a></li>
+    <li><a href="#rewards">보상 생태계</a></li>
+  </ul>
+</nav>
+
+<!-- ① HERO -->
+<section id="hero">
+  <div class="hero-bg-orb orb-red"></div>
+  <div class="hero-bg-orb orb-gold"></div>
+
+  <div class="hero-tag">
+    <div class="tag-dot"></div>
+    소방차 · 구급차 실시간 경로 연동 플랫폼
+  </div>
+
+  <h1 class="hero-title reveal">
+    <span class="gold">골든타임</span>을<br>
+    <span class="red">지키는</span> 기술
+  </h1>
+
+  <p class="hero-sub reveal reveal-delay-1">
+    소방차·구급차가 오는 방향도 모르는 시민의 불안,<br>
+    5분을 놓치는 소방관·구급대원의 안타까움.<br>
+    골든패스는 그 둘 사이를 잇습니다.
+  </p>
+
+  <div class="hero-stats reveal reveal-delay-2">
+    <div class="stat-item">
+      <span class="num gold">5분</span>
+      <span class="label">심정지 골든타임</span>
+    </div>
+    <div class="stat-item">
+      <span class="num red">0.5초</span>
+      <span class="label">GPS 위치 갱신 주기</span>
+    </div>
+    <div class="stat-item">
+      <span class="num" style="color:white;">2km</span>
+      <span class="label">알림 반경 필터링</span>
+    </div>
+  </div>
+
+  <div class="hero-cta reveal reveal-delay-3">
+    <a href="#problem" class="btn-primary">기획 살펴보기</a>
+    <a href="#mechanism" class="btn-ghost">작동 원리 보기</a>
+  </div>
+</section>
+
+<!-- ② PROBLEM -->
+<section id="problem">
+  <span class="section-eyebrow reveal">01 — Problem</span>
+  <h2 class="reveal">우리가 해결하는<br>두 가지 고통</h2>
+
+  <div class="problem-grid">
+    <div class="problem-card citizen reveal reveal-delay-1">
+      <span class="problem-icon">🚗</span>
+      <h3>시민 운전자의 불안</h3>
+      <p>
+        사이렌 소리가 들려도 어느 방향에서 오는지 알 수 없어 순간 패닉 상태에 빠집니다.
+        어디로 비켜야 할지, 멈춰야 할지 판단이 안 되는 3~5초가 생사를 가릅니다.
+      </p>
+      <span class="pain-tag">방향 불명 → 판단 지연 → 경로 차단</span>
+    </div>
+
+    <div class="problem-card firefighter reveal reveal-delay-2">
+      <span class="problem-icon">🚒🚑</span>
+      <h3>소방관·구급대원의 안타까운 현실</h3>
+      <p>
+        출동 중 길을 막는 차량 하나가 골든타임 5분을 송두리째 앗아갑니다.
+        소방차뿐 아니라 구급차도 같은 문제에 직면합니다.
+        목숨을 걸고 달리면서도 "왜 안 비켜주냐"는 좌절감은 직업 소진의 큰 원인이 됩니다.
+      </p>
+      <span class="pain-tag">경로 차단 → 골든타임 초과 → 소방관·구급대원 번아웃</span>
+    </div>
+  </div>
+</section>
+
+<!-- ③ MECHANISM -->
+<section id="mechanism">
+  <div class="mechanism-header">
+    <div>
+      <span class="section-eyebrow reveal">02 — How It Works</span>
+      <h2 class="reveal">GPS 기반<br>3단계 실시간 매칭</h2>
+    </div>
+    <p class="reveal">
+      불필요한 차량에게 알림을 보내지 않습니다.
+      진행 방향 전방에 있는 차량만 정확하게 타겟팅합니다.
+    </p>
+  </div>
+
+  <div class="steps-flow">
+    <div class="step-card reveal reveal-delay-1">
+      <span class="step-num">Step 01 — 송신</span>
+      <h3>실시간 GPS 브로드캐스트</h3>
+      <p>출동 소방차·구급차의 GPS 좌표 및 이동 방향 데이터를 <strong>0.5초 주기</strong>로 서버에 송신합니다.</p>
+      <span class="step-badge">⚡ 0.5초 갱신</span>
+    </div>
+
+    <div class="step-connector reveal">→</div>
+
+    <div class="step-card reveal reveal-delay-2">
+      <span class="step-num">Step 02 — 필터링</span>
+      <h3>반경 스마트 타겟팅</h3>
+      <p>진행 방향 전방 <strong>1~2km 반경</strong> 안에 있는 일반 차량만 타겟팅합니다. 관계없는 차량은 제외됩니다.</p>
+      <span class="step-badge">📡 2km 반경 필터</span>
+    </div>
+
+    <div class="step-connector reveal">→</div>
+
+    <div class="step-card reveal reveal-delay-3">
+      <span class="step-num">Step 03 — 연동</span>
+      <h3>내비게이션 즉시 알림</h3>
+      <p>티맵, 카플레이 등 운전자가 보고 있는 화면에 슬림 상단 바 형태로 <strong>즉시 표출</strong>됩니다.</p>
+      <span class="step-badge">📱 내비 직접 연동</span>
+    </div>
+  </div>
+</section>
+
+<!-- ④ UI DEMO -->
+<section id="uidemo">
+  <span class="section-eyebrow reveal">03 — UI / UX</span>
+  <h2 class="reveal">최소 침해 원칙,<br>슬림 상단 바 구조</h2>
+  <p class="demo-intro reveal">
+    화면 전체를 덮지 않습니다. 기존 내비게이션 위에 <strong style="color:white;">최상단 드롭다운 바</strong>로 슬림하게 등장하여, 운전자의 주행 안전을 최우선으로 지킵니다.
+  </p>
+
+  <!-- 차량 타입 토글 -->
+  <div class="vehicle-toggle reveal" id="vehicleToggle">
+    <button class="vehicle-btn active" id="btnFire" onclick="switchVehicle('fire')">
+      🚒 소방차
+    </button>
+    <button class="vehicle-btn" id="btnAmbu" onclick="switchVehicle('ambu')">
+      🚑 구급차
+    </button>
+  </div>
+
+  <!-- 차량 내비 목업 -->
+  <div class="navi-device-wrap reveal">
+    <span class="navi-screen-label">차량 내비게이션 화면 — 실시간 시뮬레이션</span>
+
+    <div class="navi-device" id="naviDevice">
+
+      <!-- 알림 바 (JS 트리거로 드롭다운) -->
+      <div class="navi-alert-bar" id="naviAlertBar">
+        <div class="navi-alert-blink" id="naviAlertBlink"></div>
+        <span class="navi-alert-truck" id="naviAlertIcon">🚒</span>
+        <div class="navi-alert-msg" id="naviAlertMsg">소방차 300m 후방 접근! &nbsp;우측 차선으로 밀착해 주세요</div>
+        <div class="navi-alert-arrows" id="naviArrows">
+          <span>›</span><span>›</span><span>›</span>
+        </div>
+        <div class="navi-alert-dist">300m</div>
+      </div>
+
+      <!-- 지도 영역 -->
+      <div class="navi-map">
+        <!-- 격자 -->
+        <div class="map-grid-h" style="top:20%"></div>
+        <div class="map-grid-h" style="top:40%"></div>
+        <div class="map-grid-h" style="top:60%"></div>
+        <div class="map-grid-h" style="top:80%"></div>
+        <div class="map-grid-v" style="left:20%"></div>
+        <div class="map-grid-v" style="left:40%"></div>
+        <div class="map-grid-v" style="left:60%"></div>
+        <div class="map-grid-v" style="left:80%"></div>
+
+        <!-- 건물 블록 -->
+        <div class="map-block" style="top:6%;left:3%;width:90px;height:54px;"></div>
+        <div class="map-block" style="top:6%;left:22%;width:55px;height:38px;"></div>
+        <div class="map-block" style="top:6%;left:45%;width:75px;height:46px;"></div>
+        <div class="map-block" style="top:6%;left:70%;width:60px;height:42px;"></div>
+        <div class="map-block" style="top:6%;right:2%;width:70px;height:50px;"></div>
+        <div class="map-block" style="bottom:6%;left:3%;width:80px;height:44px;"></div>
+        <div class="map-block" style="bottom:6%;left:24%;width:60px;height:40px;"></div>
+        <div class="map-block" style="bottom:6%;left:52%;width:85px;height:48px;"></div>
+        <div class="map-block" style="bottom:6%;right:2%;width:65px;height:42px;"></div>
+
+        <!-- 가로 메인 도로 -->
+        <div class="map-road-h" style="top:calc(42% - 14px);height:28px;"></div>
+        <div class="map-dash-h" style="top:calc(42% - 1px);left:3%;width:8%;"></div>
+        <div class="map-dash-h" style="top:calc(42% - 1px);left:18%;width:8%;"></div>
+        <div class="map-dash-h" style="top:calc(42% - 1px);left:33%;width:8%;"></div>
+        <div class="map-dash-h" style="top:calc(42% - 1px);left:48%;width:8%;"></div>
+        <div class="map-dash-h" style="top:calc(42% - 1px);left:63%;width:8%;"></div>
+        <div class="map-dash-h" style="top:calc(42% - 1px);left:78%;width:8%;"></div>
+
+        <!-- 세로 도로 -->
+        <div class="map-road-v" style="left:calc(60% - 14px);width:28px;"></div>
+        <div class="map-dash-v" style="left:calc(60% - 1px);top:5%;height:8%;"></div>
+        <div class="map-dash-v" style="left:calc(60% - 1px);top:20%;height:8%;"></div>
+        <div class="map-dash-v" style="left:calc(60% - 1px);top:60%;height:8%;"></div>
+        <div class="map-dash-v" style="left:calc(60% - 1px);top:76%;height:8%;"></div>
+
+        <!-- 파란 경로 하이라이트 -->
+        <div class="map-route" style="top:calc(42% - 14px);height:28px;left:0;width:60%;"></div>
+
+        <!-- 2km 반경 원 -->
+        <div class="map-range" id="mapRange"></div>
+
+        <!-- 소방차 / 구급차 (JS 애니메이션) -->
+        <div class="map-truck" id="mapTruck">
+          <div class="map-truck-ring" id="mapTruckRing"></div>
+          <span id="mapTruckIcon">🚒</span>
+        </div>
+
+        <!-- 내 차 -->
+        <div class="map-mycar">🚗</div>
+
+        <!-- 토스트 팝업 -->
+        <div class="navi-toast" id="naviToast">
+          <span style="font-size:18px;">🤝</span>
+          <span class="navi-toast-text">영웅의 길을 열어주셨습니다!</span>
+          <span class="navi-toast-score">+5점</span>
+        </div>
+      </div>
+
+      <!-- 하단 내비 정보 바 -->
+      <div class="navi-info-bar">
+        <div class="navi-info-left">
+          <div class="navi-info-eta">12<span>분 후 도착</span></div>
+          <div class="navi-info-dest">아산병원 응급센터</div>
+        </div>
+        <div class="navi-info-speed">
+          <div class="navi-speed-num">48</div>
+          <span class="navi-speed-unit">km/h</span>
+        </div>
+        <div class="navi-info-right">
+          <span class="navi-info-dist">1.2 km</span>
+          <span class="navi-info-road">강남대로</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 단계 칩 -->
+    <div class="navi-steps">
+      <div class="navi-step-chip">
+        <span class="chip-num">STEP 01</span>
+        <span class="chip-desc">소방차 GPS<br>0.5초 송신</span>
+      </div>
+      <div class="navi-step-chip">
+        <span class="chip-num">STEP 02</span>
+        <span class="chip-desc">전방 2km<br>차량 필터링</span>
+      </div>
+      <div class="navi-step-chip active">
+        <span class="chip-num">STEP 03 — 지금 이 순간</span>
+        <span class="chip-desc">슬림 상단 바로 내비 화면에 즉시 표출</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 기능 설명 리스트 -->
+  <ul class="demo-features reveal" style="margin-top:48px;">
+    <li>
+      <div class="feature-icon-wrap red">🔴</div>
+      <div class="feature-text">
+        <h4>네온 레드 + 방향 애니메이션</h4>
+        <p>시인성 높은 레드 컬러와 뒤에서 앞으로 치고 나가는 화살표 모션으로 즉각적 인지 유도</p>
+      </div>
+    </li>
+    <li>
+      <div class="feature-icon-wrap gold">🔊</div>
+      <div class="feature-text">
+        <h4>성우 음성 가이드 동시 표출</h4>
+        <p>사운드 감쇄 후 정확한 차선 안내 음성이 내비 볼륨에 맞게 자동 조정되어 재생</p>
+      </div>
+    </li>
+    <li>
+      <div class="feature-icon-wrap gold">⭐</div>
+      <div class="feature-text">
+        <h4>즉각적 심리 피드백</h4>
+        <p>길을 터주는 순간 "영웅의 길을 열어주셨습니다" 토스트 팝업으로 즉각적인 만족감 제공</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ⑤ REWARDS -->
+<section id="rewards">
+  <span class="section-eyebrow reveal">04 — Reward Ecosystem</span>
+  <h2 class="reveal">"세상 살맛 나네"<br>명예와 보상 생태계</h2>
+
+  <div class="rewards-grid">
+    <div class="reward-card gold-card reveal reveal-delay-1">
+      <span class="reward-label gold">시민 운전자</span>
+      <h3>안전점수 + 영웅 칭호</h3>
+      <p>안전하게 길을 터줄 때마다 즉각적인 심리적 만족과 안전점수를 적립합니다. 커피 한 잔의 따뜻함이 선행의 동기가 됩니다.</p>
+      <div class="toast-example">
+        <span class="toast-example-icon">🤝</span>
+        <span class="toast-example-text">영웅의 길을 열어주셨습니다!</span>
+        <span class="toast-example-score">+5점</span>
+      </div>
+      <div class="badge-row" style="margin-top: 20px;">
+        <span class="badge gold">☕ 커피 쿠폰</span>
+        <span class="badge gold">🦸 도시 영웅</span>
+        <span class="badge gold">🛡️ 안전 수호자</span>
+      </div>
+    </div>
+
+    <div class="reward-card red-card reveal reveal-delay-2">
+      <span class="reward-label red">소방관 / 구급대원</span>
+      <h3>명예 배지 & 국민 감사</h3>
+      <p>복귀한 소방관·구급대원 전용 마이페이지에 국민들이 인증한 명예 배지가 정렬됩니다. 시민들이 보낸 따뜻한 메시지와 커피 쿠폰이 번아웃을 막습니다.</p>
+      <div class="badge-row">
+        <span class="badge red">🔥 골든타임 수호자</span>
+        <span class="badge red">🚑 생명의 은인</span>
+        <span class="badge red">🏅 국민 영웅</span>
+      </div>
+      <div style="margin-top:20px;padding:16px;background:rgba(255,59,48,0.08);border-radius:10px;border:1px solid rgba(255,59,48,0.15);">
+        <p style="font-size:13px;color:var(--white-60);margin:0;line-height:1.8;">
+          💬 "덕분에 제 아이가 살았습니다. 진심으로 감사합니다."<br>
+          <span style="font-size:12px;">— 시민 김○○ · 커피 쿠폰 1장 전달됨</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ CLOSING -->
+<section id="closing">
+  <div class="closing-orb"></div>
+
+  <span class="section-eyebrow reveal">골든패스 — Golden Pass</span>
+  <h2 class="reveal" style="max-width:700px;margin:0 auto;">
+    돈이 아닌<br>
+    <span style="color:var(--gold);">생명</span>과 <span style="color:var(--red);">명예</span>를<br>
+    설계합니다
+  </h2>
+
+  <div class="closing-divider" style="margin:40px auto 0;"></div>
+
+  <p class="closing-line reveal">
+    "다들 돈이 안 된다고 고개 돌릴 때,<br>
+    우리는 소방관님들이 아직은 세상 살맛 나게 만드는<br>
+    온기를 1순위로 짚어냅니다."
+  </p>
+
+  <div class="hero-cta reveal" style="justify-content:center;">
+    <a href="#hero" class="btn-primary">처음부터 다시 보기</a>
+  </div>
+
+  <p class="closing-meta reveal" style="line-height: 1.8; max-width: 800px; margin: 0 auto; padding-top: 40px;">
+    Copyright 2026. 조진훈(Cho Jin-hoon) all rights reserved.<br>
+    본 기획서 및 소스코드(HTML Form 로직 포함)의 지적 재산권은 원작자 '조진훈'에게 있으며, 저작권법 제136조에 의해 보호받습니다.<br>
+    원작자의 서면 동의 없는 무단 전재, 복사, 배포 및 상업적 도용(유사 서비스 기획 포함)을 금하며, 위반 시 민·형사상 손해배상 청구 및 법적 처벌을 받을 수 있습니다.
+  </p>
+</section>
+
+<script src="golden-pass.js"></script>
+</body>
+</html>
