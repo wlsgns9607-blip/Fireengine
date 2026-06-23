@@ -135,4 +135,4 @@ open golden-pass.html
 
 ## 📄 라이선스
 
-© 2025 골든패스 (Golden Pass) — Portfolio Project
+© 2026 골든패스 (Golden Pass) — Portfolio Project
