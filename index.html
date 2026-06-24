@@ -17,6 +17,7 @@
     <li><a href="#mechanism">작동 원리</a></li>
     <li><a href="#uidemo">UI 데모</a></li>
     <li><a href="#rewards">보상 생태계</a></li>
+    <li><a href="#ux-vision">기획 비전</a></li>
   </ul>
 </nav>
 
@@ -302,10 +303,23 @@
   <h2 class="reveal">"세상 살맛 나네"<br>명예와 보상 생태계</h2>
 
   <div class="rewards-grid">
+    <!-- 테슬라 vs 골든패스 CORE CONCEPT -->
+    <div class="reward-card reveal" style="grid-column: 1 / -1; background: linear-gradient(135deg, rgba(255,193,7,0.08) 0%, rgba(255,59,48,0.08) 100%); border: 1px dashed rgba(255,193,7,0.35); padding: 32px; display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase;">🏆 PROJECT CORE CONCEPT</span>
+      <h3 style="font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 4px; border: none; padding: 0;">Tesla (기계 중심) vs Golden Pass (인간 심리 중심)</h3>
+      <p style="font-size: 14px; color: var(--white-60); line-height: 1.8; margin: 0;">
+        기계가 알아서 피하는 테슬라의 자율주행 방식과 달리, 골든패스는 운전자의 <strong>'명예욕'</strong>과 <strong>'보상 심리'</strong>를 완벽하게 자극하는 <strong>게이미피케이션(Gamification) UX</strong>가 핵심입니다.
+      </p>
+    </div>
+
+    <!-- 시민 운전자 -->
     <div class="reward-card gold-card reveal reveal-delay-1">
-      <span class="reward-label gold">시민 운전자</span>
+      <span class="reward-label gold">시민 운전자 (더 히어로 뱃지)</span>
       <h3>안전점수 + 영웅 칭호</h3>
-      <p>안전하게 길을 터줄 때마다 즉각적인 심리적 만족과 안전점수를 적립합니다. 커피 한 잔의 따뜻함이 선행의 동기가 됩니다.</p>
+      <p>
+        긴급차량에 길을 양보할 때마다 차량 디스플레이에 실시간으로 <strong>'골든클래스 영웅 뱃지'</strong>와 안전 마일리지가 부여됩니다. 
+        이 뱃지는 단순한 그래픽이 아니라 카닥터 연동 세차/정비 결제 시 현금처럼 쓰는 <strong>현대카드 M포인트 및 주유 할인권</strong>으로 즉시 치환되어 극강의 동기부여를 제공합니다.
+      </p>
       <div class="toast-example">
         <span class="toast-example-icon">🤝</span>
         <span class="toast-example-text">영웅의 길을 열어주셨습니다!</span>
@@ -313,19 +327,24 @@
       </div>
       <div class="badge-row" style="margin-top: 20px;">
         <span class="badge gold">☕ 커피 쿠폰</span>
-        <span class="badge gold">🦸 도시 영웅</span>
-        <span class="badge gold">🛡️ 안전 수호자</span>
+        <span class="badge gold">🦸 골든클래스 영웅</span>
+        <span class="badge gold">💳 현대카드 M포인트</span>
+        <span class="badge gold">⛽ 주유 할인권</span>
       </div>
     </div>
 
+    <!-- 소방관 / 구급대원 -->
     <div class="reward-card red-card reveal reveal-delay-2">
-      <span class="reward-label red">소방관 / 구급대원</span>
+      <span class="reward-label red">소방관 / 구급대원 (국민 감사 매칭)</span>
       <h3>명예 배지 & 국민 감사</h3>
-      <p>복귀한 소방관·구급대원 전용 마이페이지에 국민들이 인증한 명예 배지가 정렬됩니다. 시민들이 보낸 따뜻한 메시지와 커피 쿠폰이 번아웃을 막습니다.</p>
+      <p>
+        대원들의 태블릿에 시민들이 보낸 실시간 <strong>'감사 메시지'</strong>와 <strong>'명예 응원 뱃지'</strong>가 누적되어, 현장 대원들의 정신적 피로도(번아웃)를 케어하는 심리적 안전망을 구축합니다.
+      </p>
       <div class="badge-row">
         <span class="badge red">🔥 골든타임 수호자</span>
         <span class="badge red">🚑 생명의 은인</span>
-        <span class="badge red">🏅 국민 영웅</span>
+        <span class="badge red">🏅 명예 응원 뱃지</span>
+        <span class="badge red">💬 국민 감사 매칭</span>
       </div>
       <div style="margin-top:20px;padding:16px;background:rgba(255,59,48,0.08);border-radius:10px;border:1px solid rgba(255,59,48,0.15);">
         <p style="font-size:13px;color:var(--white-60);margin:0;line-height:1.8;">
@@ -333,6 +352,30 @@
           <span style="font-size:12px;">— 시민 김○○ · 커피 쿠폰 1장 전달됨</span>
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- 💡 UX VISION -->
+<section id="ux-vision" style="border-top: 1px solid var(--white-20);">
+  <span class="section-eyebrow reveal">05 — UX Insights & Vision</span>
+  <h2 class="reveal">테슬라를 압살하는<br>'인간 심리 중심' 패러다임</h2>
+  
+  <div class="rewards-grid" style="margin-top: 56px;">
+    <div class="reward-card reveal reveal-delay-1" style="grid-column: 1 / span 1; border-color: rgba(255,193,7,0.25);">
+      <span class="reward-label gold">🧠 움직이는 동기의 차이</span>
+      <h3>기계적 회피 vs 심리 제어</h3>
+      <p style="margin: 0;">
+        테슬라의 기술은 센서가 장애물을 피하는 '기계적 회피'에 불과하지만, 골든패스는 대한민국 운전자들의 이타심 및 명예욕을 디자인한 <strong>'심리 제어형 플랫폼'</strong>입니다.
+      </p>
+    </div>
+    
+    <div class="reward-card reveal reveal-delay-2" style="grid-column: 2 / span 1; border-color: rgba(55,138,221,0.25);">
+      <span class="reward-label blue" style="color: var(--blue);">🤝 자발적 영웅 생태계</span>
+      <h3>명예와 실리의 결합</h3>
+      <p style="margin: 0;">
+        운전자에게 \"비켜라\"라고 강요하거나 기계가 빼앗는 것이 아니라, \"당신은 길을 터준 영웅입니다\"라는 명예(뱃지)와 실리(리워드)를 동시에 쥐어줌으로써, 도로 위의 모든 운전자가 기분 좋게 동참하는 자발적 상생 생태계를 완성합니다.
+      </p>
     </div>
   </div>
 </section>
